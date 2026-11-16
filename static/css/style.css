@@ -1,0 +1,52 @@
+/* static/css/style.css - ClinicFlow Custom Styling */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar for Slots Container */
+#slots-container::-webkit-scrollbar {
+    width: 6px;
+}
+#slots-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+#slots-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 8px;
+}
+#slots-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Doctor Card Transitions */
+.doctor-card {
+    transition: all 0.25s ease;
+}
+.doctor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(2, 132, 199, 0.15);
+}
+
+/* Slot Button Hover & Selection Effects */
+.slot-btn {
+    transition: all 0.18s ease;
+}
+.slot-btn:not(:disabled):hover {
+    transform: scale(1.02);
+}
+.slot-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
